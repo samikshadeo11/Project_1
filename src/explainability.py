@@ -10,7 +10,11 @@ model = joblib.load("models/factoryguard_model.pkl")
 df = pd.read_csv("data/dataset.csv")
 
 # 3. Define features (MUST match training)
-FEATURES = ['temperature', 'vibration', 'current']
+FEATURES = ['vibration', 'acoustic', 'temperature', 'current',
+    'IMF_1', 'IMF_2', 'IMF_3',
+    'vibration_roll_mean_1h', 'vibration_roll_mean_6h', 'vibration_roll_mean_12h',
+    'temperature_std_6h', 'current_ema_12h',
+    'vibration_lag_1', 'vibration_lag_2', 'acoustic_lag_1']
 
 X = df[FEATURES]
 

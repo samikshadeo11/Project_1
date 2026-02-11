@@ -45,13 +45,11 @@ df = df.dropna()
 # 3. Select Features & Target
 # =========================
 FEATURES = [
-    'temperature',
-    'vibration',
-    'pressure',
-    'temp_roll_mean_6',
-    'vibration_std_6',
-    'temp_lag_1',
-    'vibration_lag_1'
+    'vibration', 'acoustic', 'temperature', 'current',
+    'IMF_1', 'IMF_2', 'IMF_3',
+    'vibration_roll_mean_1h', 'vibration_roll_mean_6h', 'vibration_roll_mean_12h',
+    'temperature_std_6h', 'current_ema_12h',
+    'vibration_lag_1', 'vibration_lag_2', 'acoustic_lag_1'
 ]
 
 TARGET = 'failure'
